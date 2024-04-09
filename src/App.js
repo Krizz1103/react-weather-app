@@ -5,7 +5,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather defaultCity="Bali" />
+        <Weather defaultCity="Madrid" />
         <footer>
           This Website was coded by Kristin Kessler and is{" "}
           <a
