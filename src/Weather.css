@@ -50,3 +50,17 @@
   position: relative;
   top: -32px;
 }
+@media (max-width: 500px) {
+  .Weather canvas {
+    height: 40px;
+    width: 40px;
+    margin-right: 5px;
+  }
+  .Weather .temperature {
+    font-size: 40px;
+  }
+  .Weather .units {
+    font-size: 14px;
+    top: -20px;
+  }
+}
