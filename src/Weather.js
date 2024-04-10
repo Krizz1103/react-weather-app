@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import ActualDate from "./ActualDate";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import "./Weather.css";
 
@@ -14,7 +15,7 @@ export default function Weather(props) {
       wind: Math.round(response.data.wind.speed),
       cityName: response.data.name,
       humidity: response.data.main.humidity,
-      date: "Tuesday 17:13",
+      date: new Date(response.data.dt * 1000),
       icon: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
     });
   }
@@ -43,7 +44,9 @@ export default function Weather(props) {
         </form>
         <h1>{weatherData.cityName}</h1>
         <ul>
-          <li>{weatherData.date}</li>
+          <li>
+            <ActualDate date={weatherData.date} />
+          </li>
           <li className="text-capitalize">{weatherData.description}</li>
         </ul>
         <div className="row mt-3">
