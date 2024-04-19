@@ -5,3 +5,17 @@
   opacity: 0.5;
   margin-left: 4px;
 }
+@media (max-width: 500px) {
+  .WeatherForecast {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .WeatherForecast {
+    font-size: 10px;
+  }
+  .WeatherForecast .row {
+    --bs-gutter-x: 0.5rem;
+  }
+}
